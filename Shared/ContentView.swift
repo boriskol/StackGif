@@ -30,12 +30,10 @@ struct ContentView: View {
                                 }.listStyle(.plain)
                             })
                         }
+                        if !self.gifs.isEmpty{
                         Section(header: VStack(alignment: .leading, spacing: 8){
                             Text("Gifs Stack").font(.body).foregroundColor(.purple).fontWeight(.bold).padding(.leading)
                         }, content: {
-                            if self.gifs.isEmpty{
-                                Text("gifs: is empty")
-                            }
                             Text("count: \(self.gifs.count)")
                             
                             List{
@@ -47,6 +45,7 @@ struct ContentView: View {
                                 }
                             }.listStyle(.plain)
                         })
+                        }
                         // MARK: Gifs
                         Section(header: VStack(alignment: .leading, spacing: 8){
                             Text("Gifs Traiding").font(.body).foregroundColor(.purple).fontWeight(.bold).padding(.leading)
