@@ -55,7 +55,7 @@ struct ContentView: View {
                                 ForEach(self.gifs.gifs, id: \.id) { gif in
                                     GifCell(gif: gif, geometry: geometry)
                                         .onTapGesture {
-                                            debugPrint(gif)
+                                            //debugPrint(gif)
                                             self.gifs.push(gif)
                                         }
                                 }
